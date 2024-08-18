@@ -1,6 +1,6 @@
-boto3==1.9.227
-dnsimple==2.0.0
-dnspython==1.16.0
-pygraphviz==1.5
-requests==2.22.0
-tldextract==2.2.1
+boto3==1.35.0
+dnsimple==2.15.0
+dnspython==2.6.1
+pygraphviz==1.13
+requests==2.32.3
+tldextract==5.1.2
