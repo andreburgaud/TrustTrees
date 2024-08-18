@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 
+# Build state
 FROM python:3.12.5-slim-bookworm AS build
 
 WORKDIR /opt/app
@@ -22,12 +23,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install .
 
 
+# Application stage
 FROM python:3.12.5-slim-bookworm
 
 COPY --from=build /opt/venv /opt/venv
 
 ENV PATH="/opt/venv/bin:$PATH"
-
 
 RUN apt-get update && \
     apt-get install -yqq \
@@ -35,10 +36,6 @@ RUN apt-get update && \
     apt-get clean
 
 RUN mkdir /output
-
-RUN groupadd -r appuser && useradd -r -g appuser appuser
-
-USER appuser
 
 WORKDIR /
 
