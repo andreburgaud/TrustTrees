@@ -1,8 +1,13 @@
+.venv/
 env/*
 graphs/*
+output/
+
 
 .DS_Store
 
 *.dot
 *.png
 *.pyc
+
+TrustTrees.egg-info/
