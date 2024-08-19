@@ -11,3 +11,5 @@ output/
 
 .github/
 TrustTrees.egg-info/
+Dockerfile
+requirements-dev.txt
