@@ -7,7 +7,6 @@ WORKDIR /opt/app
 
 RUN apt-get update && \
     apt-get install -yqq \
-      graphviz \
       libgraphviz-dev \
       build-essential && \
     apt-get clean
